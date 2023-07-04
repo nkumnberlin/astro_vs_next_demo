@@ -1,0 +1,13 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SONGS from '../../assets/tmpSongs.json'
+import SongText from '../../components/SongText/SongText.svelte'
+const { id } = Astro.params
+const song = SONGS.find((song)=> song.title === id);
+---
+
+<Layout title="Welcome to Astro.">
+       <p style={{color:'white', paddingTop: '1rem'}}></p>
+        <SongText song={song} />
+</Layout>
+

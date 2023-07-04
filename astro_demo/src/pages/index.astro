@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card';
+import SONGS from '../assets/tmpSongs.json'
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<ul role="list" class="link-card-grid">
+			{SONGS.map(({title, img, album})=> <Card
+				href={title}
+				title={title}
+				body={album}
+				image={img}
+			/>)}
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	marquee{
+		font-size: 3rem;
+		margin-bottom: 2rem;
+	}
+	main {
+		padding: 1.5rem 0 1.5rem 0;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>

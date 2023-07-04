@@ -1,0 +1,63 @@
+---
+import SONGS from "../assets/tmpSongs.json";
+import Card from "../components/Card";
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href="https://fonts.cdnfonts.com/css/i-hate-comic-sans-2" rel="stylesheet">
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+	<main>
+		<marquee class="intro"><span class="text-gradient">Nicolas 90's Banger</span></marquee>
+		<Card
+			title="Willkommen!"
+			body="... auf meiner kleinen Website fuer 90's Banger"
+		/>
+		<slot />
+	</main>
+	</body>
+</html>
+<style is:global>
+	:root {
+		background: #000;
+		--accent: 253, 224, 71;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+		font-family: 'I hate Comic Sans', sans-serif;
+	}
+	main{
+		max-width: 110ch;
+		margin: auto;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	marquee{
+		font-size: 3rem;
+		margin: 2rem;
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background-color: #F6F6F6;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+</style>
