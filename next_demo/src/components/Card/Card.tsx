@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 export interface Props {
 	title: string;
@@ -19,7 +20,7 @@ function Card(props: Props) {
                 <p className={styles.p}>
                     {body}
                 </p>
-                {image && <img width={100} height={100} src={image} alt={title} /> }
+                {image && <Image src={image} width={100} height={100}  alt={title} /> }
                 {href && <div className={styles.container}> <a className={styles.button} href={title}>Sing den Banger &rarr;</a></div>}
             </div>
         </li>
