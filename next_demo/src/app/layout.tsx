@@ -28,6 +28,7 @@ export default function RootLayout({
     </Head>
       <body className={inter.className}>
       <main className='main'>
+        {/*// @ts-ignore*/}
         <marquee className="marquee"><span className="text-gradient">Nicolas 90s Banger</span></marquee>
         <Card
             title="Willkommen!"
