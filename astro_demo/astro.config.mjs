@@ -8,6 +8,6 @@ import image from "@astrojs/image";
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), svelte(), image()],
-  output: 'server',
+  output: 'hybrid',
   adapter: vercel()
 });
