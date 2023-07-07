@@ -1,14 +1,16 @@
+
 export interface Props {
 	title: string;
 	body: string;
 	href?: string;
     image: string;
+    children: React.ReactNode
 }
 
 import styles from './Card.module.css';
 
 function Card(props: Props) {
-	const { href, title, body, image } = props;
+	const { href, title, body, image, children } = props;
     return (
         <li className={styles.linkCard}>
             <div>
@@ -18,7 +20,7 @@ function Card(props: Props) {
                 <p>
                     {body}
                 </p>
-                {image && <img width={100} height={100} src={image} alt={title} /> }
+                {children}
                 {href && <div className={styles.container}> <a className={styles.button} href={title}>Sing den Banger &rarr;</a></div>}
 
             </div>
