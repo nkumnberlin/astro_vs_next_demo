@@ -31,7 +31,7 @@ export default function RootLayout({
         {/*// @ts-ignore*/}
         <marquee className="marquee"><span className="text-gradient">Nicolas 90s Banger</span></marquee>
         <Card
-            title="Willkommen!"
+            title="Willkommen! (Next.js)"
             body="... auf meiner kleinen Website fuer 90's Banger"
             image={''}/>
         <slot/>
