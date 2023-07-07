@@ -1,22 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card';
-import SONGS from '../assets/tmpSongs.json'
+import Searchbar from "../components/Searchbar/Searchbar.astro";
+import fetchSongs from "../database/fetchSongs";
+const songs = fetchSongs();
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Willkommen bei Nicolas Banger Sucher Webseite!.">
 	<main>
+		<Searchbar />
 		<ul role="list" class="link-card-grid">
-			{SONGS.map(({title, img, album})=> <Card
+			{songs.map(({title, img, artist})=> <Card
 				href={title}
 				title={title}
-				body={album}
+				body={artist}
 				image={img}
 			/>)}
 		</ul>
 	</main>
-	<a href='https://www.free-counters.org/'>https://www.free-Counters.org</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=79e7e978a58408e8f8869bec26e84774f091413b'></script>
-	<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1049778/t/0"></script>
+	<!--<a href='https://www.free-counters.org/'>https://www.free-Counters.org</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=79e7e978a58408e8f8869bec26e84774f091413b'></script>-->
+	<!--<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1049778/t/0"></script>-->
 </Layout>
 
 <style>

@@ -1,0 +1,44 @@
+
+<form>
+    <label for="name" class="label">Search a Song</label>
+    <input type="text" id="name" name="name"><br><br>
+</form>
+<button data-confetti-button type="submit" value="submit">Search!</button>
+
+
+<script client:load type="module" is:inline>
+    import confetti from '../../../node_modules/canvas-confetti';
+
+    const buttons = document.querySelectorAll('[data-confetti-button]');
+    const navigate = () => {
+        window.location = document.getElementById('name').value
+    };
+    buttons.forEach((button) => {
+        button.addEventListener('click', navigate)
+        })
+    const explosion = ()=>confetti({
+        particleCount: 100,
+        startVelocity: 30,
+        spread: 360,
+        origin: {
+            x: Math.random(),
+            // since they fall down, start a bit higher than random
+            y: Math.random() - 0.2
+        }
+    });
+    document.getElementById('name').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            e.preventDefault()
+            navigate()
+        }
+    });
+    document.getElementById('name').addEventListener('input', explosion)
+
+</script>
+
+
+<style>
+    .label{
+        color: white;
+    }
+</style>

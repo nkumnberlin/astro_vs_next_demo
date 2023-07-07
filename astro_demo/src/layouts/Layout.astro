@@ -1,5 +1,4 @@
 ---
-import SONGS from "../assets/tmpSongs.json";
 import Card from "../components/Card";
 export interface Props {
 	title: string;
@@ -13,7 +12,7 @@ const { title } = Astro.props;
 	<head>
 		<link href="https://fonts.cdnfonts.com/css/i-hate-comic-sans-2" rel="stylesheet">
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
+		<meta name="description" content="Astro vs Next.js Vergleich. Kandidat Astro">
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
@@ -21,7 +20,7 @@ const { title } = Astro.props;
 	</head>
 	<body>
 	<main>
-		<marquee class="intro"><span class="text-gradient">Nicolas 90's Banger</span></marquee>
+		<marquee class="intro" ><span class="text-gradient">Nicolas 90's Banger</span></marquee>
 		<Card
 			title="Willkommen!"
 			body="... auf meiner kleinen Website fuer 90's Banger"
@@ -38,7 +37,8 @@ const { title } = Astro.props;
 		font-family: 'I hate Comic Sans', sans-serif;
 	}
 	main{
-		max-width: 110ch;
+		padding: 2rem;
+		max-width: 1024px;
 		margin: auto;
 	}
 	.text-gradient {

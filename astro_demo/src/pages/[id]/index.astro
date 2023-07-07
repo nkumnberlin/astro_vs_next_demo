@@ -1,13 +1,14 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import SONGS from '../../assets/tmpSongs.json'
 import SongText from '../../components/SongText/SongText.svelte'
+import fetchSong from "../../database/fetchSong";
+import {Song} from "../../interfaces/Song";
 const { id } = Astro.params
-const song = SONGS.find((song)=> song.title === id);
+const song: Song | undefined = fetchSong(id)
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Willkommen bei Nicolas Banger Sucher Webseite!">
        <p style={{color:'white', paddingTop: '1rem'}}></p>
-        <SongText song={song} />
+       {song ?  <SongText song={song} /> :  <p style={{color:'white'}}>Oh well, that's sad. No song found</p> }
 </Layout>
 

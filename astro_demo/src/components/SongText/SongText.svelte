@@ -24,6 +24,12 @@
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
     }
 
+        @media screen and (max-width: 800px) {
+            img{
+                width: 250px;
+                height: 250px;
+        }
+    }
     .linkCard > div {
         width: 100%;
         text-decoration: none;
@@ -33,6 +39,11 @@
         color: #111;
         background-color: white;
         opacity: 0.8;
+    }
+    @media screen and (max-width: 800px) {
+        .linkCard > div {
+            padding: 0;
+        }
     }
 
 
@@ -47,16 +58,5 @@
         margin-bottom: 0;
         color: #444;
         min-height: 3rem;
-    }
-    .button:is(:hover, :focus-within) {
-        background-position: 0;
-        background-image: var(--accent-gradient);
-    }
-    .button:is(:hover, :focus-within) h2 {
-        color: rgb(var(--accent));
-    }
-
-    .container {
-        padding: 1rem 0 0 0;
     }
 </style>

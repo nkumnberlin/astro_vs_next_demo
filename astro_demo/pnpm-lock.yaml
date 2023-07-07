@@ -5,9 +5,12 @@ specifiers:
   '@astrojs/svelte': ^3.1.0
   '@astrojs/ts-plugin': ^1.0.10
   '@astrojs/vercel': ^3.6.0
+  '@types/canvas-confetti': ^1.6.0
   '@types/react': ^18.0.21
   '@types/react-dom': ^18.0.6
   astro: ^2.7.3
+  canvas-confetti: ^1.6.0
+  pnpm: ^8.6.6
   react: ^18.0.0
   react-dom: ^18.0.0
   svelte: ^4.0.0
@@ -20,9 +23,14 @@ dependencies:
   '@types/react': 18.2.14
   '@types/react-dom': 18.2.6
   astro: 2.7.3
+  canvas-confetti: 1.6.0
+  pnpm: 8.6.6
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   svelte: 4.0.3
+
+devDependencies:
+  '@types/canvas-confetti': 1.6.0
 
 packages:
 
@@ -782,6 +790,10 @@ packages:
       '@babel/types': 7.22.5
     dev: false
 
+  /@types/canvas-confetti/1.6.0:
+    resolution: {integrity: sha512-Yq6rIccwcco0TLD5SMUrIM7Fk7Fe/C0jmNRxJJCLtAF6gebDkPuUjK5EHedxecm69Pi/aA+It39Ux4OHmFhjRw==}
+    dev: true
+
   /@types/debug/4.1.8:
     resolution: {integrity: sha512-/vPO1EPOs306Cvhwv7KfVfYvOJqA/S/AXjaHQiJboCZzcNDb+TIJFN9/2C9DZ//ijSKWioNyUxD792QmDJ+HKQ==}
     dependencies:
@@ -1192,6 +1204,10 @@ packages:
 
   /caniuse-lite/1.0.30001512:
     resolution: {integrity: sha512-2S9nK0G/mE+jasCUsMPlARhRCts1ebcp2Ji8Y8PWi4NDE1iRdLCnEPHkEfeBrGC45L4isBx5ur3IQ6yTE2mRZw==}
+    dev: false
+
+  /canvas-confetti/1.6.0:
+    resolution: {integrity: sha512-ej+w/m8Jzpv9Z7W7uJZer14Ke8P2ogsjg4ZMGIuq4iqUOqY2Jq8BNW42iGmNfRwREaaEfFIczLuZZiEVSYNHAA==}
     dev: false
 
   /ccount/2.0.1:
@@ -2847,6 +2863,12 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       find-up: 4.1.0
+    dev: false
+
+  /pnpm/8.6.6:
+    resolution: {integrity: sha512-a51bIJyCmvstgCvsWf6SgZnsXfWmwAW1pHWEaH2gN3vqQGC58yLFL/oKBwcZWH0mjpMzBWRXdS9dLdN6GAK2Rw==}
+    engines: {node: '>=16.14'}
+    hasBin: true
     dev: false
 
   /postcss/8.4.24:
