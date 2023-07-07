@@ -1,10 +1,10 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Comic_Neue } from 'next/font/google'
 import Head from "next/head";
 import Card from "@/components/Card";
 import React from "react";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Comic_Neue({ subsets: ['latin'], weight: '400'})
 
 export const metadata = {
   title: 'Astro vs Next.js Vergleich. Kandidat Next',
