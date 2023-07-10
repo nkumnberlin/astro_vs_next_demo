@@ -7,10 +7,10 @@ import {Song} from "../../interfaces/Song";
 
 export async function getStaticPaths() {
        // url der seite
-       const ids =  fetchSongs().map((song)=> ({params: {id: song.title}}))
-       return ids
+       console.log('how many times does it gets executed')
+       return fetchSongs().map((song) => ({params: {id: song.title}}))
     }
-
+// webiny anbinden als ssg
 const { id } = Astro.params
 const song: Song | undefined = fetchSong(id)
 ---
