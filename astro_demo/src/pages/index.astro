@@ -4,7 +4,6 @@ import Card from '../components/Card';
 import Searchbar from "../components/Searchbar/Searchbar.astro";
 import fetchSongs from "../database/fetchSongs";
 const songs = fetchSongs();
-import { Picture } from '@astrojs/image/components';
 ---
 
 <Layout title="Willkommen bei Nicolas Banger Sucher Webseite!.">
@@ -20,8 +19,6 @@ import { Picture } from '@astrojs/image/components';
 			</Card>)}
 		</ul>
 	</main>
-	<!--<a href='https://www.free-counters.org/'>https://www.free-Counters.org</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=79e7e978a58408e8f8869bec26e84774f091413b'></script>-->
-	<!--<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1049778/t/0"></script>-->
 </Layout>
 
 <style>
