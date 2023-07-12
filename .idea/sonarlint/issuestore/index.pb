@@ -16,8 +16,6 @@ $astro_demo/src/database/fetchSong.ts,f/8/f842f6d7c8a8bf601b9a3207cd04a2eecdeec
 G
 next_demo/tsconfig.json,8/b/8b3d4cc63bf9bf3d61e6139657fade1b41722dba
 G
-astro_demo/package.json,2/a/2a25f02729142371c1701068479e02c0049a9a07
-G
 next_demo/next-env.d.ts,5/a/5a2a57bff8938a0913a0ea0b4a97dd8b0f6ba224
 H
 next_demo/src/react.d.ts,b/b/bb6d23a8cb3a3b89452d863485d18a93212c114e
@@ -37,5 +35,3 @@ Q
 -next_demo/src/components/Card/Card.module.css,9/1/912053b801cfdc2c9ab1d0377124ee3903053479
 R
 "next_demo/src/assets/tmpSongs.json,2/6/26ec5c30b54cdfc23080d0b7cae461d31f3e17cc
-S
-#astro_demo/src/assets/tmpSongs.json,1/8/18ad566e130dc3aa3e215deb38df6c77967b8e2c
