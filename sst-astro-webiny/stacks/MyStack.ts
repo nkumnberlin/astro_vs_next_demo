@@ -9,7 +9,11 @@ export function API({stack}: StackContext) {
     // });
 
     const site = new StaticSite(stack, 'site', {
-        path: "astro_demo/"
+        path: "astro_demo/",
+        environment: {
+            ASTRO_PUBLIC_WEBINY_API_URL:"",
+    WEBINY_API_TOKEN:""
+        }
     })
     // Add the site's URL to stack output
     stack.addOutputs({
