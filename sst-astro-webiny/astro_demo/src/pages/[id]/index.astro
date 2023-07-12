@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SongText from '../../components/SongText/SongText.svelte'
+import {Song} from "../../interfaces/Song";
+import fetchSongs from "../../api/methods/fetchSongs";
+import fetchSong from "../../api/methods/fetchSong";
+
+export async function getStaticPaths() {
+       // url der seite
+       const songs = await fetchSongs();
+       return songs.map((song) => ({params: {id: song.title}}))
+    }
+// webiny anbinden als ssg
+const { id } = Astro.params
+const song: Song | undefined = await fetchSong(id)
+---
+
+<Layout title="Willkommen bei Nicolas Banger Sucher Webseite!">
+       <p style={{color:'white', paddingTop: '1rem'}}></p>
+       {song ?  <SongText song={song[0]} /> :  <p style={{color:'white'}}>Oh well, that's sad. No song found</p> }
+</Layout>
+
