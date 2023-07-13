@@ -1,0 +1,45 @@
+name: build
+
+# workflow triggers
+on:
+  push:
+    branches: main
+  workflow_dispatch:
+  
+  # Allows external webhook trigger
+  repository_dispatch:
+    types:
+      - webhook
+
+# build process
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2.3.1
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: '16.x'
+    
+    - run: |
+        cd sst-astro-webiny
+        npm install yarn
+        yarn
+        cd astro_demo
+        yarn astro build
+        cd ../
+        yarn sst deploy
+    
+        
+    - name: Deploy 🚀
+      if: github.ref == 'refs/heads/source'
+      uses: JamesIves/github-pages-deploy-action@4.1.1
+      with:
+        branch: main
+        folder: public
+        clean: true
