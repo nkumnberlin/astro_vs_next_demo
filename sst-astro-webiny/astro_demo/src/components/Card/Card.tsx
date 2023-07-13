@@ -21,7 +21,7 @@ function Card(props: Props) {
                     {body}
                 </p>
                 {children}
-                {href && <div className={styles.container}> <a className={styles.button} href={href}>Sing den Banger &rarr;</a></div>}
+                {href && <div className={styles.container}> <a className={styles.button} href={`${href}/`}>Sing den Banger &rarr;</a></div>}
 
             </div>
         </li>

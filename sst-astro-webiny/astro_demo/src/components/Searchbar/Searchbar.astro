@@ -6,12 +6,12 @@
 <button data-confetti-button type="submit" value="submit">Search!</button>
 
 
-<script client:load type="module" is:inline>
-    import confetti from '../../../node_modules/canvas-confetti';
+<script>
+    import confetti from 'canvas-confetti';
 
     const buttons = document.querySelectorAll('[data-confetti-button]');
     const navigate = () => {
-        window.location = document.getElementById('name').value
+        window.location = `${document.getElementById('name').value}/`
     };
     buttons.forEach((button) => {
         button.addEventListener('click', navigate)
