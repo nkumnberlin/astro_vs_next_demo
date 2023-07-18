@@ -3,8 +3,6 @@ I
 astro_demo/pnpm-lock.yaml,5/b/5b480cdc1a3cdc2db341ba079c3dc47ab40e23c7
 W
 'astro_demo/src/components/Card/index.ts,e/1/e172320a468cd451912e0238f2183d7ec8bb5c37
-G
-astro_demo/src/env.d.ts,c/9/c9d802bcd7187be2a4c7e14f674178a0310b2dbb
 Q
 !astro_demo/src/interfaces/Song.ts,c/e/ce8a5d9366baa321209871d109b5fea521b2c35c
 U

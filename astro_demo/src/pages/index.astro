@@ -4,11 +4,13 @@ import Card from '../components/Card';
 import Searchbar from "../components/Searchbar/Searchbar.astro";
 import fetchSongs from "../database/fetchSongs";
 const songs = fetchSongs();
+import ReactSearchbar from "../components/ReactSearchbar/Searchbar"
+
 ---
 
 <Layout title="Willkommen bei Nicolas Banger Sucher Webseite!.">
 	<main>
-		<Searchbar />
+		<ReactSearchbar client:load/>
 		<ul role="list" class="link-card-grid">
 			{songs.map(({title, img, artist})=> <Card
 				href={title}
