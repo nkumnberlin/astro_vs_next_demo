@@ -14,6 +14,7 @@ const songs: Song[] = await fetchSongs();
 		<Searchbar />
 		<ul role="list" class="link-card-grid">
 			{songs.map(({title, img, artist})=> <Card
+				client:load
 				href={title}
 				title={title}
 				body={artist}
