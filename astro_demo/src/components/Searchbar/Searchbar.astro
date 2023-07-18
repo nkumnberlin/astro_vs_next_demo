@@ -6,8 +6,8 @@
 <button data-confetti-button type="submit" value="submit">Search!</button>
 
 
-<script client:load type="module" is:inline>
-    import confetti from '../../../node_modules/canvas-confetti';
+<script>
+    import confetti from 'canvas-confetti';
 
     const buttons = document.querySelectorAll('[data-confetti-button]');
     const navigate = () => {

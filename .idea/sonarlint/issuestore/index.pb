@@ -27,8 +27,6 @@ T
 $next_demo/src/database/fetchSongs.ts,a/f/af8fc920619236c3e5eac56ab73ae570cc9528a9
 S
 #next_demo/src/database/fetchSong.ts,5/2/521beffe83c38ab4cc3df1185cec6923af100555
-c
-3astro_demo/src/components/Searchbar/Searchbar.astro,5/a/5a56e403d575736ab7c8ca059ab229cd03109915
 Q
 !next_demo/src/app/page.module.css,4/b/4bd4798e81baf2a081e2145dc5fcec9f670b5031
 ]
